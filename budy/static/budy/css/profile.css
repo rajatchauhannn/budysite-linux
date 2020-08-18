@@ -1,0 +1,13 @@
+.container {
+    padding: 20px;
+    background: url(/media/bg-blur.jpg) no-repeat fixed;
+    border-radius: 16px;
+    margin: auto;
+    background-position: left;
+}
+.content-section {
+    background-color: #e9ecef;
+    margin: auto;
+    padding: 20px;
+    border-radius: 16px;
+}

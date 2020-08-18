@@ -1,0 +1,6 @@
+{% extends "budy/base.html" %}
+
+{% block main %}
+  <p>Logged out!</p>  
+  <a href="{% url 'login' %}?next=/">Click here to login again.</a>
+{% endblock %}

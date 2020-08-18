@@ -1,0 +1,37 @@
+{% extends "budy/base.html" %}
+{% load static %}
+{% block extrastyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'budy/css/profile.css' %}" />
+{% endblock %}
+{% block main %}
+	<div class = "container">
+		<div class = "content-section">
+			<div class = "media">
+				<img class = "rounded-circle account-img" src="{{  user.profile.image.url }}">
+				<div class = "media-body">
+					<h2 class="account-heading">{{ user.username }}</h2>
+					<p class = "text-secondary">{{ user.email }}</p>
+				</div>
+			</div>
+			<form method = "post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<fieldset class = "form-group">
+					<legend class= "border-bottom mb-4">Profile Information: </legend>
+					<div class = "col">
+						{{ u_form.as_p }}
+						<br><br>
+						{{ p_form.as_table }}
+					</div>
+				</fieldset>
+				<div class = "form-group">
+					<button class = "btn btn-outline-info" type="submit">Update</button>
+				</div>
+			</form>
+		</div>
+	</div
+
+{% endblock main %}
+{% block javascripts %}
+	<script type="text/javascript" src = "{% static 'budy/script/profile.js' %}" >document.getElementsByTagName("{% static 'budy/dashboard.css'}")[0].disabled = true;</script>
+{% endblock javascripts %}
+

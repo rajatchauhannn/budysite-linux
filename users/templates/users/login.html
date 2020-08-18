@@ -1,0 +1,136 @@
+{% extends 'budy/base.html' %}
+{% load static %}
+{% block extrastyles %}
+	<link rel="stylesheet" href="{% static 'budy/css/form.css' %}">
+{% endblock %}
+{% block main %}
+<script type="text/javascript"> document.getElementById('login_status').style.display = 'none'</script>
+<div class = "container" id ="login-register-container">
+	<div class = "row">
+		<div class = "col-sm-6">
+			<div class = "card">
+				<div class = "card-body">
+				  <h2 class="card-title">Register</h2>
+
+					<button  class = "btn btn-secondary" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+					<div id="id01" class="modal">
+					  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+					  <form class="modal-content animate" action="{% url 'register' %}" style = "color: black" method = "post">
+					  	{% csrf_token %}
+					  	<div><br>
+						  {% if allerrors %}
+						  	<div class="alert alert-danger alert-dismissible text-center" role="alert" id ="signup-warn">
+							  	{% for err in allerrors %}
+									{{ err }}
+								{% endfor %}
+							</div>
+						  {% endif %}
+						  {% if next %}
+							{% if user.is_authenticated %}
+							  <div class="alert alert-danger" role="alert">
+								Your account doesn't have access to this page. To proceed,
+							  please login with an account that has access.
+							  </div>
+							{% else %}
+							  <div class="alert alert-dark" role="alert">
+								Please login to see this page.
+							  </div>
+							{% endif %}
+						  {% endif %}
+						</div>
+					    <div class="container">
+					      <h1 style = "color: white">Sign Up</h1>
+					      <p style = "color: white">Please fill in this form to create an account.</p>
+					      <hr>
+					      <label for = "username" style = "color: white"><b>Username</b></label>
+					      <input type="text" placeholder="Enter Username" name="username" required id = "username">
+
+					      <label for = "email" style = "color: white"><b>Email</b></label>
+					      <input type="text" placeholder="Enter Email" name="email" required id = "email">
+
+					      <label for =  "password1" style = "color: white"><b>Password</b></label>
+					      <input type="password" placeholder="Enter Password" name="password1" required id = "password1">
+
+					      <label for = "password2" style = "color: white"><b>Repeat Password</b></label>
+					      <input type="password" placeholder="Repeat Password" name="password2" required id = "password2">
+
+					      <label style = "color: white" >
+					        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+					      </label>
+
+					      <p style = "color: white">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+					      <div class="clearfix">
+					      	<button type="submit" class="signup">Sign Up</button>
+					        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+					    </div>
+				      </div>
+					  </form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class = "col-sm-6">
+			<div class = "card">
+				<div class = "card-body">
+				  <h2 class="card-title">Login</h2>
+
+					<button class = "btn btn-primary" onclick="document.getElementById('id02').style.display='block'">Login</button>
+
+					<div id="id02" class="modal">
+						<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+					  	<form class="modal-content animate" action="{% url 'login' %}" method="post">
+						  {% csrf_token %}
+						  <div class="imgcontainer">
+					      	<img src="{% static 'budy/img/logo.jpg' %}" alt="Avatar" class="avatar">
+					      </div>
+						<div><br>
+						  {% if form.errors %}
+							<div class="alert alert-danger alert-dismissible text-center" role="alert">
+							  Your username and password didn't match. Please try again.
+							</div>
+						  {% endif %}
+
+						  {% if next %}
+							{% if user.is_authenticated %}
+							  <div class="alert alert-danger" role="alert">
+								Your account doesn't have access to this page. To proceed,
+							  please login with an account that has access.
+							  </div>
+							{% else %}
+							  <div class="alert alert-dark" role="alert">
+								Please login to see this page.
+							  </div>
+							{% endif %}
+						  {% endif %}
+						</div>
+
+					    <div class="container">
+					      <label style = "color: white"><b>Username</b></label>
+					      <input type="text" placeholder="Enter Username" name="username" required>
+
+					      <label style = "color: white"><b>Password</b></label>
+					      <input type="password" placeholder="Enter Password" name="password" required>
+
+					      <button type="submit" style = "color: white" value="login">Login</button>
+							<input type="hidden" name="next" value="{{ next }}" />
+					      <label style = "color: white">
+					        <input type="checkbox" checked="checked" name="remember" style = "color: white"> Remember me
+					      </label>
+					    </div>
+
+					    <div class="container">
+					      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+					      <span class="psw" style = "color: white">Forgot <a href="{% url 'password_reset' %}">password?</a></span>
+					    </div>
+					  </form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script type="text/javascript" src = "{% static 'budy/script/form.js' %}"></script>
+{% endblock %}

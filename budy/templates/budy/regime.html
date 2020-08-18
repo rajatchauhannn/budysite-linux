@@ -1,0 +1,25 @@
+{% extends 'budy/base.html' %}
+{% block main %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'budy/css/regime.css' %}">
+<div>
+	<div id = "timerbuttons">
+		<button id = "start" onclick= 'x = timer("{{ workouts }}", "{{ area }}"); document.getElementById("timeblock").style.display="block"'>Start</button>
+		<button id = "stopbtn" onclick = "document.getElementById('timeblock').style.display = 'none'; clearInterval(x)">Stop</button>
+	</div>
+
+	<div id = "timeblock" class = "Modal" style="display: none;">
+		<span onclick="document.getElementById('timeblock').style.display='none'" class="close" title="Close Modal">&times;</span>
+		<h1 id = "exercise">ex</h1>
+		<h2 id = "timelabel">time</h2>
+	</div>
+</div>
+
+
+
+{% endblock main %}
+
+
+{% block javascripts %}
+	<script type="text/javascript" src = "{% static 'budy/script/dashboard.js' %}" >document.getElementsByTagName("{% static 'budy/dashboard.css'}")[0].disabled = true;</script>
+{% endblock javascripts %}

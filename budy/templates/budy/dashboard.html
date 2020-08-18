@@ -1,0 +1,70 @@
+{% extends 'budy/base.html' %}
+{% load static %}
+{% block extrastyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'budy/css/dashboard.css' %}" />
+{% endblock %}
+{% block main %}
+<div class="container">
+  <div class="row">
+      <div class="col">
+          <div class="jumbotron">
+              <h1 class="display-4">Auto-Workout Generator</h1>
+                <p class="lead"></p>
+              <form action = "{% url 'budy:home' %}" method = "post">
+                {% csrf_token %}
+                  <div class="card-group">
+                    <label>
+                    <div class="card">
+                        <input type="radio" name="area" class="card-input-element d-none" id="CHEST" value = "CHEST">
+                        <div class="card card-body bg-light d-flex flex-row justify-content-between align-items-center">CHEST</div>
+                    </div>
+                    </label>
+
+                    <label>
+                    <div class="card">
+                        <input type="radio" name="area" class="card-input-element d-none" id="LEGS" value = "LEGS">
+                        <div class="card card-body bg-light d-flex flex-row justify-content-between align-items-center">LEGS</div>
+                    </div>
+                    </label>
+
+
+                    <label>
+                    <div class="card">
+                        <input type="radio" name="area" class="card-input-element d-none" id="HIIT" value = "HIIT">
+                        <div class="card card-body bg-light d-flex flex-row justify-content-between align-items-center">HIIT</div>
+                    </div>
+                    </label>
+
+                    <label>
+                    <div class="card">
+                        <input type="radio" name="area" class="card-input-element d-none" id="ABS" value = "ABS">
+                        <div class="card card-body bg-light d-flex flex-row justify-content-between align-items-center">ABS</div>
+                    </div>
+                    </label>
+
+                  </div>
+
+                  <div class="col-sm-14">
+                  <label for="timming" class="col-sm-2 col-form-label col-form-label-lg">Duration:</label>
+                  <div class="form-group">
+                    <input class="form-control form-control-lg mw-auto" name="timming" id="timming" placeholder="0000 (seconds)">
+                  </div>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block ">DONE</button>
+                  </div>
+
+            </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+
+    {% if list_of_workouts %}
+        {{ list_of_workouts }}
+    {% endif %}
+{% endblock %}
+{% block javascripts %}
+	<script type="text/javascript" src = "{% static 'budy/script/dashboard.js' %}" >document.getElementsByTagName("{% static 'budy/dashboard.css'}")[0].disabled = true;</script>
+{% endblock javascripts %}

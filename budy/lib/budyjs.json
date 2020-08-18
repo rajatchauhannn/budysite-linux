@@ -1,0 +1,78 @@
+{
+	"CHEST":{
+
+		"PushUp": {"reps": 20, "duration":45,"rest": 30,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 3, "enable": true},
+
+		"DiamondPushUp": {"reps":10,"duration": 30, "rest":30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 5, "enable": true},
+
+		"ArcherPushUps": {"reps": 20, "duration":60,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 7, "enable": true},
+
+		"InclinePushUps": {"reps": 25, "duration":60,"rest": 30,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 2, "enable": true},
+
+		"ElevatedPushUps": {"reps": 15, "duration":60,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 4, "enable": true},
+
+		"ExplosivePushUps": {"reps": 10, "duration":30,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 6, "enable": true},
+
+		"HandStandPushUps": {"reps": 5, "duration":30,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 10, "enable": true},
+
+		"PikePushUps": {"reps": 10, "duration":25,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 6, "enable": true},
+
+		"ElevatedPikePushUps": {"reps": 10, "duration":30,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 7, "enable": true},
+
+		"DumbellPushUps": {"reps": 20, "duration":60,"rest": 30,"cardio": false, "equipment": "dumbells", "source": "ThenX", "difficulty": 4, "enable": true},
+
+		"60SecondsPushUp": {"reps": 1, "duration":60,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 9, "enable": true},
+
+		"KneePushUps": {"reps": 20, "duration":60,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 1, "enable": true},
+
+		"WidePushUps": {"reps": 20, "duration":60,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 5, "enable": true}
+
+	},
+
+	"LEGS":{
+
+		"Squats": {"reps": 20, "duration":60,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 4, "enable": true},
+
+		"Lunges": {"reps": 20, "duration":60,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 4, "enable": true},
+
+		"WeightedSquats": {"reps": 20, "duration":60,"rest": 30,"cardio": false, "equipment": "dumbells", "source": "ThenX", "difficulty": 4, "enable": true},
+
+		"WeightedLunges": {"reps": 15, "duration":60,"rest": 30,"cardio": false, "equipment":"dumbells", "source": "ThenX", "difficulty": 6, "enable": true}
+
+	},
+
+	"HIIT": {
+
+		"Burpees": {"reps": 10, "duration":60,"rest": 40,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 8, "enable": true},
+
+		"HighKneeTaps": {"reps": 60, "duration":45,"rest": 45,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 4, "enable": true},
+
+		"Skipping": {"reps": 50, "duration":60,"rest": 30,"cardio": true, "equipment": "rope", "source": "ThenX", "difficulty": 3, "enable": true},
+
+		"JumpingJacks": {"reps": 30, "duration":45,"rest": 45,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 4, "enable": true}
+	},
+
+	"ABS": {
+
+		"LegRaises": {"reps": 15, "duration":30,"rest": 30,"cardio": false, "equipment": null, "source": "ThenX", "difficulty": 4, "enable": true},
+
+		"Planck": {"reps": 15, "duration":45,"rest": 30,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 2, "enable": true},
+
+		"DumbellSideBend": {"reps": 15, "duration":45,"rest": 30,"cardio": true, "equipment": "dumbelss", "source": "ThenX", "difficulty": 3, "enable": true},
+
+		"FlutterKicks": {"reps": 30, "duration":45,"rest": 30,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 5, "enable": true},
+
+		"SidePlanck": {"reps": 15, "duration":30,"rest": 30,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 4, "enable": true},
+
+		"SitUps": {"reps": 20, "duration":30,"rest": 30,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 6, "enable": true},
+
+		"WeightedSitUps": {"reps": 15, "duration":30,"rest": 30,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 7, "enable": true},
+
+		"RussianTwists": {"reps": 30, "duration":45,"rest": 30,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 6, "enable": true},
+
+		"WeightedRussianTwists": {"reps": 20, "duration":30,"rest": 30,"cardio": true, "equipment": "dumbells", "source": "ThenX", "difficulty": 8, "enable": true},
+
+		"LegTwistRaises": {"reps": 30, "duration":30,"rest": 45,"cardio": true, "equipment": null, "source": "ThenX", "difficulty": 5, "enable": true}
+	}
+
+}
