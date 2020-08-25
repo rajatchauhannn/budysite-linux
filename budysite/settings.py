@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['192.168.1.218',
 # Application definition
 
 INSTALLED_APPS = [
+    'exercise.apps.ExerciseConfig',
     'users.apps.UsersConfig',
     'budy.apps.BudyConfig',
     'django.contrib.admin',

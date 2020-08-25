@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
+from exercise import views as exercise_views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
@@ -34,7 +35,7 @@ urlpatterns = [
     path('password_reset_complete/',auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),name='password_reset_complete'),
     path('password_reset_complete/',auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),name='password_reset_complete'),
 
-    # path('accounts/', include('django.contrib.auth.urls')),
+    path('exercises/', include('exercise.urls')),
     path('', include('budy.urls')),
 ]
 

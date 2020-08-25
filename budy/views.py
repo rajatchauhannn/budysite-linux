@@ -1,13 +1,11 @@
 from django.shortcuts import render
 from .lib.budy import phase1
-from .models import exercises_Db
 from django.contrib.auth.decorators import login_required
 
 
 @login_required
 def index(request):
-    exer = exercises_Db.objects.all()
-    return render(request, 'budy/dashboard.html', {'exer' : exer})
+    return render(request, 'budy/dashboard.html')
 
 @login_required
 def home(request):
