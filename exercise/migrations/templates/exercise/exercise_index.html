@@ -1,0 +1,29 @@
+{% extends 'budy/base.html' %}
+{% load static %}
+{% block extrastyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'budy/css/exercise.css' %}" />
+{% endblock extrastyles %}
+
+
+{% block main %}
+
+    <div class="card box" style="width: 30rem;">
+        <img class="card-img-top" src="/media/pushup.jpg">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+{% endblock main%}
+
+
+{% block javascripts %}
+	<script type="text/javascript" src = "{% static 'budy/script/exercise.js' %}"> document.getElementsByTagName("{% static 'budy/dashboard.css'}")[0].disabled = true;</script>
+{% endblock javascripts %}
