@@ -16,7 +16,7 @@ cp==0.0.0
 crm==0.0.0
 distlib==0.3.0
 dj-database-url==0.5.0
-Django==3.0.7
+Django==3.0.14
 django-countdowntimer-model==0.0.6
 django-heroku==0.3.1
 Eel==0.12.4
